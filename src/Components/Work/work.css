@@ -1,0 +1,83 @@
+/* Work Section Styles */
+.work-container {
+  height: auto; /* Adjust height for content */
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+.work-title {
+  font-size: 2rem;
+  color: #333;
+  margin-top: 100px; /* Reduced margin for better positioning */
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Work Grid */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  gap: 1.5rem;
+  margin-top: 30px; /* Slight margin above the work items */
+}
+
+.work-box {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.work-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.work-position {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1d4ed8;
+}
+
+.work-company {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.work-duration {
+  font-size: 1rem;
+  color: #888;
+}
+
+.work-description {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .work-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .work-container{
+    width: 100%;
+    padding: 2rem 3.6rem;
+  }
+  .work-grid {
+    grid-template-columns: 1fr; /* Single column for mobile */
+  }
+
+  .work-box {
+    padding: 1rem; /* Reduce padding for mobile */
+  }
+
+  .work-title {
+    font-size: 1.5rem; /* Adjust title font size */
+    margin-top: 50px; /* Adjust margin */
+  }
+}

@@ -1,0 +1,194 @@
+/* Hero Section */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  padding: 2rem 1rem;
+  height: 100vh;
+}
+
+.home-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Added gap for better spacing */
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #1d4ed8;
+}
+
+.hero-content > span {
+  display: block; /* Added display block for proper rendering */
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin: 1rem 0;
+  color: #555;
+}
+
+.hero-btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #1d4ed8; /* Blue background */
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #2563eb; /* Darker blue on hover */
+  transform: scale(1.05);
+}
+
+.hero-btn:active {
+  background-color: #1e3a8a;
+}
+
+/* Profile Image */
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/*Btn style*/
+/* From Uiverse.io by nikk7007 */ 
+.button {
+  --color: #00A97F;
+  padding: 0.8em 1.7em;
+  background-color: transparent;
+  border-radius: .3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: var(--color);
+  z-index: 1;
+ }
+ 
+ .button::before, .button::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 1s ease;
+ }
+ 
+ .button::before {
+  top: -1em;
+  left: -1em;
+ }
+ 
+ .button::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+ }
+ 
+ .button:hover::before, .button:hover::after {
+  height: 410px;
+  width: 410px;
+ }
+ 
+ .button:hover {
+  color: rgb(10, 25, 30);
+ }
+ 
+ .button:active {
+  filter: brightness(.8);
+ }
+ 
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+  .hero-section {
+    padding: 2rem 1rem;
+  }
+
+  .profile-pic {
+    width: 300px; 
+    height: 300px;
+  }
+
+  .hero-btn {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem 3.6rem;
+    width: 100%;
+    height: 100%;
+    min-height: 1300px;
+  }
+
+  .hero-content {
+    margin-bottom: 1.5rem;
+  }
+
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+    margin-top: 40px;
+  }
+
+  .hero-btn {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-section {
+    width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content > span {
+    font-size: 1.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-btn {
+    width: 70%;
+    font-size: 1.1rem;
+  }
+}
